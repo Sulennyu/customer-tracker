@@ -5,12 +5,22 @@ const customers = [
     {name:"John Smith", email:"johnsmith@gmail.com",purchases:["shorts","volleyball","sunglasses"]},
     {name:"Bella James", email:"bellajames@gmail.com",purchases:["skirt","socks","bracelet"]}
 ];
-console.log("=== Customers: Initial ===");
-customers.forEach(obj =>console.log(`Name: ${obj.name} | Email: ${obj.email} | Purchases: ${obj.purchases}`) );
+console.log("=== Initial Customer Report ===");
+customers.forEach(obj =>console.log(`Name: ${obj.name} | Email: ${obj.email} | Purchases: ${obj.purchases}`))
 
 const newObject = {name:"Arthur Young",email:"arthuryoung@gmail.com",purchases:["notebook","pencil","eraser"]};
 customers.push(newObject);
-console.log("\nAdded customer:", `${newObject.name} | ${newObject.email} | ${newObject.purchases}`);
+
+customers.shift();
+
+customers[0].email = "Johnnyapplesmith@gmail.com";
+
+customers[1].purchases.push("shorts");
+
+console.log("\n=== Final Customer Report ===");
+customers.forEach(obj =>console.log(`Name: ${obj.name} | Email: ${obj.email} | Total Purchases: ${obj.purchases.length}`));
+
+
 
 
 
