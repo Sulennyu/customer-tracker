@@ -5,11 +5,9 @@ const customers = [
     {name:"John Smith", email:"johnsmith@gmail.com",purchases:["shorts","volleyball","sunglasses"]},
     {name:"Bella James", email:"bellajames@gmail.com",purchases:["skirt","socks","bracelet"]}
 ];
-console.log("=== Initial Customer Report ===");
-customers.forEach(obj =>console.log(`Name: ${obj.name} | Email: ${obj.email} | Purchases: ${obj.purchases}`))
 
-const newObject = {name:"Arthur Young",email:"arthuryoung@gmail.com",purchases:["notebook","pencil","eraser"]};
-customers.push(newObject);
+const newCustomer = {name:"Arthur Young",email:"arthuryoung@gmail.com",purchases:["notebook","pencil","eraser"]};
+customers.push(newCustomer);
 
 customers.shift();
 
@@ -17,8 +15,8 @@ customers[0].email = "Johnnyapplesmith@gmail.com";
 
 customers[1].purchases.push("shorts");
 
-console.log("\n=== Final Customer Report ===");
-customers.forEach(obj =>console.log(`Name: ${obj.name} | Email: ${obj.email} | Total Purchases: ${obj.purchases.length}`));
+console.log("\n=== Final Customer Information ===");
+customers.forEach(cust =>console.log(`Name: ${cust.name} | Email: ${cust.email} | Total Purchases: ${cust.purchases.length}`));
 
 
 
